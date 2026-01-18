@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaTwitter, FaReact, FaNodeJs, FaSass } from 'react-icons/fa';
 import { SiTailwindcss, SiJavascript, SiNextdotjs } from 'react-icons/si';
+import profileimg from '../assets/Gemini_Generated_Image_oetcu8oetcu8oetc (1).png';
 
 const Hero = () => {
     return (
@@ -44,7 +45,7 @@ const Hero = () => {
                     <motion.img
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         transition={{ type: "spring", stiffness: 300 }}
-                        src="..\src\assets\Gemini_Generated_Image_oetcu8oetcu8oetc (1).png"
+                        src={profileimg}
                         alt="Profile"
                         className="w-100 h-100 object-contain relative z-10 drop-shadow-2xl"
                     />
