@@ -2,14 +2,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import { userData } from '../data/user';
 
+
+
 const Hero = () => {
     return (
         <section id="home" className="min-h-screen relative flex items-center justify-center overflow-hidden bg-white dark:bg-slate-950 transition-colors duration-500">
 
-            <div className="absolute inset-0 z-0">
-                <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/20 rounded-full blur-[100px] animate-pulse"></div>
-                <div className="absolute bottom-20 right-20 w-80 h-80 bg-indigo-500/20 rounded-full blur-[100px] animate-pulse delay-700"></div>
-            </div>
+
 
             <div className="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -44,21 +43,28 @@ const Hero = () => {
                         <motion.a
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            href="#projects"
+                            href="/resume.pdf"
+                            download="Sivakumar_Resume.pdf"
                             className="px-8 py-4 rounded-full bg-indigo-600 text-white font-semibold shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all flex items-center justify-center gap-2"
                         >
-                            View Projects
+                            Download Resume
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                                <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
                             </svg>
                         </motion.a>
                         <motion.a
                             whileHover={{ scale: 1.05, backgroundColor: "rgba(99, 102, 241, 0.1)" }}
                             whileTap={{ scale: 0.95 }}
-                            href="#contact"
-                            className="px-8 py-4 rounded-full border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-medium hover:border-indigo-500 dark:hover:border-indigo-400 transition-all flex items-center justify-center"
+                            href="/resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-8 py-4 rounded-full border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-medium hover:border-indigo-500 dark:hover:border-indigo-400 transition-all flex items-center justify-center gap-2"
                         >
-                            Contact Me
+                            View Resume
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" xmlSpace="preserve" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
                         </motion.a>
                     </div>
                 </motion.div>

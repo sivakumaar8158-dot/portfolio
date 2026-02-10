@@ -1,6 +1,7 @@
 
 import { ThemeProvider } from './context/ThemeContext';
-import DigitalNerves from './components/DigitalNerves'; // Import DigitalNerves
+import DigitalNerves from './components/DigitalNerves';
+import GlobalBackground from './components/GlobalBackground';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -13,7 +14,8 @@ function App() {
   return (
     <ThemeProvider>
       <div className="relative min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors duration-500 font-sans">
-        <DigitalNerves /> {/* Add Digital Nerves Background */}
+        <GlobalBackground />
+        <DigitalNerves />
         <Header />
 
         <main>
