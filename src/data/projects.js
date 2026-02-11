@@ -2,52 +2,33 @@
 export const projectsData = [
     {
         id: 1,
-        title: "Personal Portfolio",
-        description: "A modern, highly attractive portfolio website built with React, Vite, and Tailwind CSS. Features dark mode, dynamic content, and responsive design.",
-        category: "Frontend",
-        tech: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
-        github: "#",
+        title: "Find Your Donor",
+        description: "A full-stack application connecting blood donors with those in need. Features user authentication, real-time search, and donor management.",
+        category: "Full Stack",
+        tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+        github: "https://github.com/sivakumaar8158-dot/find-your-donor",
         live: "#",
-        image: "https://placehold.co/600x400/indigo/white?text=Portfolio"
+        image: "https://opengraph.githubassets.com/1/sivakumaar8158-dot/find-your-donor"
     },
     {
         id: 2,
         title: "E-Commerce Frontend",
         description: "A responsive shopping platform with cart functionality and product filtering.",
         category: "Frontend",
-        tech: ["React", "Tailwind CSS", "Redux"],
-        github: "#",
+        tech: ["React", "Tailwind CSS"],
+        github: "https://github.com/sivakumaar8158-dot/ecommerce-frontend",
         live: "#",
-        image: "https://placehold.co/600x400/indigo/white?text=E-Commerce"
+        image: "https://opengraph.githubassets.com/1/sivakumaar8158-dot/ecommerce-frontend"
     },
     {
         id: 3,
-        title: "Task Management App",
-        description: "Drag-and-drop task organizer with local storage persistence.",
+        title: "Personal Portfolio",
+        description: "A modern, highly attractive portfolio website built with React, Vite, and Tailwind CSS. Features dark mode, dynamic content, and responsive design.",
         category: "Frontend",
-        tech: ["React", "DnD", "Styled Components"],
-        github: "#",
+        tech: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
+        github: "https://github.com/sivakumaar8158-dot/portfolio",
         live: "#",
-        image: "https://placehold.co/600x400/purple/white?text=Task+Manager"
+        image: "https://opengraph.githubassets.com/1/sivakumaar8158-dot/portfolio"
     },
-    {
-        id: 4,
-        title: "API Gateway Service",
-        description: "Scalable API gateway handling authentication and rate limiting.",
-        category: "Backend",
-        tech: ["Node.js", "Express", "Redis"],
-        github: "#",
-        live: "#",
-        image: "https://placehold.co/600x400/green/white?text=API+Gateway"
-    },
-    {
-        id: 5,
-        title: "User Auth System",
-        description: "Secure authentication system with JWT and OAuth integration.",
-        category: "Backend",
-        tech: ["Node.js", "MongoDB", "Passport.js"],
-        github: "#",
-        live: "#",
-        image: "https://placehold.co/600x400/blue/white?text=Auth+System"
-    }
+ 
 ];

@@ -3,7 +3,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { projectsData } from '../data/projects';
 
+import { useNavigate } from 'react-router-dom';
+
 const ProjectCard = ({ project, index }) => {
+    const navigate = useNavigate();
+
+    const handleCardClick = () => {
+        navigate(`/project/${project.id}`);
+    };
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -11,7 +19,8 @@ const ProjectCard = ({ project, index }) => {
             viewport={{ once: true }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
             whileHover={{ y: -10 }}
-            className="group relative bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-700/50"
+            onClick={handleCardClick}
+            className="group relative bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-700/50 cursor-pointer"
         >
             {/* Image / Preview */}
             <div className="relative h-64 overflow-hidden">
@@ -24,6 +33,7 @@ const ProjectCard = ({ project, index }) => {
                 <div className="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-sm">
                     <a
                         href={project.github}
+                        onClick={(e) => e.stopPropagation()}
                         className="p-3 bg-white/10 hover:bg-white text-white hover:text-indigo-600 rounded-full backdrop-blur-md transition-all transform hover:scale-110 border border-white/20"
                         title="View Code"
                     >
@@ -31,6 +41,7 @@ const ProjectCard = ({ project, index }) => {
                     </a>
                     <a
                         href={project.live}
+                        onClick={(e) => e.stopPropagation()}
                         className="p-3 bg-white/10 hover:bg-white text-white hover:text-green-600 rounded-full backdrop-blur-md transition-all transform hover:scale-110 border border-white/20"
                         title="Live Demo"
                     >
@@ -94,13 +105,13 @@ const Projects = () => {
                 {/* Tabs */}
                 <div className="flex justify-center mb-12">
                     <div className="bg-white dark:bg-slate-800 p-1.5 rounded-full shadow-lg border border-slate-100 dark:border-slate-700 inline-flex gap-2">
-                        {['All', 'Frontend', 'Backend'].map((tab) => (
+                        {['All', 'Full Stack', 'Frontend'].map((tab) => (
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
                                 className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeTab === tab
-                                        ? 'bg-indigo-600 text-white shadow-md'
-                                        : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                                    ? 'bg-indigo-600 text-white shadow-md'
+                                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                                     }`}
                             >
                                 {tab}
