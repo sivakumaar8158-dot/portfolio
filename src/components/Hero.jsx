@@ -1,6 +1,8 @@
 import { motion, AnimatePresence } from 'framer-motion';
 
+
 import { userData } from '../data/user';
+import resumePdf from '../assets/SIVAKUMAR_RESUME26 (2).pdf';
 
 
 
@@ -43,7 +45,7 @@ const Hero = () => {
                         <motion.a
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            href="/resume.pdf"
+                            href={resumePdf}
                             download="Sivakumar_Resume.pdf"
                             className="px-8 py-4 rounded-full bg-indigo-600 text-white font-semibold shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all flex items-center justify-center gap-2"
                         >
@@ -55,7 +57,7 @@ const Hero = () => {
                         <motion.a
                             whileHover={{ scale: 1.05, backgroundColor: "rgba(99, 102, 241, 0.1)" }}
                             whileTap={{ scale: 0.95 }}
-                            href="/resume.pdf"
+                            href={resumePdf}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="px-8 py-4 rounded-full border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-medium hover:border-indigo-500 dark:hover:border-indigo-400 transition-all flex items-center justify-center gap-2"
