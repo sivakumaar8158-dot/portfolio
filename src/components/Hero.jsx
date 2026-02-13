@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 import { userData } from '../data/user';
-import resumePdf from '../assets/SIVAKUMAR_RESUME26 (2).pdf';
+import resumePdf from '../assets/SIVAKUMAR_UPDATED_RESUME.pdf';
 
 
 
